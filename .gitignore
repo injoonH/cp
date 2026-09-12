@@ -4,5 +4,6 @@
 .vscode/
 
 .clangd
+input.txt
 
 .DS_Store
