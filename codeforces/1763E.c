@@ -19,14 +19,11 @@ int main() {
             int rm = w - a[i], cr = k[rm][0] + i;
             if (cr > mn)
                 continue;
-            if (cr < mn) {
-                mn = cr;
-                mx = k[rm][1] + k[rm][0] * i;
-            } else {
-                int t = k[rm][1] + k[rm][0] * i;
-                if (mx < t)
-                    mx = t;
-            }
+            int t = k[rm][1] + k[rm][0] * i;
+            if (cr < mn)
+                mn = cr, mx = t;
+            else if (mx < t)
+                mx = t;
         }
         k[w][0] = mn;
         k[w][1] = mx;
